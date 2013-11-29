@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <head>
+    <title>Break ALL the Bricks!</title>
+  </head>
+
+  <canvas></canvas>
+  
+  <script
+    type="application/javascript"
+    src="http://underscorejs.org/underscore.js">
+  </script>
+  <script type="application/javascript" src="keymaster.js"></script>
+  <script type="application/javascript" src="brick.js"></script>
+  <script type="application/javascript" src="game.js"></script>
+  <script type="application/javascript" src="paddle.js"></script>
+  <script type="application/javascript" src="ball.js"></script>
+  
+  <script>
+    var canvas = document.getElementsByTagName("canvas")[0];
+    canvas.setAttribute('height', BB.Game.HEIGHT);
+    canvas.setAttribute('width', BB.Game.WIDTH);
+    
+    var context = canvas.getContext('2d');
+
+    var game = new BB.Game(context);
+    game.setup(3);
+    game.start();
+
+  </script>
+  
+</body>
+</html>
